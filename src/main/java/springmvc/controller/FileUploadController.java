@@ -24,6 +24,9 @@ public class FileUploadController {
 	@RequestMapping(value="/doUpload", method=RequestMethod.POST)
 	public String doUpload(@ModelAttribute("formUpload") FileUpload fileupload, BindingResult result ){
 	
+		//validate
+		
+		
 		if(result.hasErrors()) {
 			return "uploadPage";
 		} else {

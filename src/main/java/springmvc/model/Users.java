@@ -11,14 +11,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Users {
 	
-	@XmlElement(name="users")
-	private List<Users> users = null;
+	@XmlElement(name="user")
+	private List<User> users = null;
 
-	public List<Users> getUsers() {
+	public List<User> getUsers() {
 		return users;
 	}
 
-	public void setUsers(List<Users> users) {
+	public void setUsers(List<User> users) {
 		this.users = users;
 	}
 }

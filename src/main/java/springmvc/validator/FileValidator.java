@@ -6,6 +6,7 @@ import org.springframework.validation.Validator;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import springmvc.model.FileUpload;
+import springmvc.utils.CommonUtils;
 
 @Component
 public class FileValidator implements Validator {
@@ -28,6 +29,11 @@ public class FileValidator implements Validator {
 			}
 			//check file extension
 			
+			String fileExtension = CommonUtils.getFileExtension(multipartFile.getOriginalFilename().toLowerCase());
+			if(fileExtension.equals("xml") && !fileExtension.equals("csv") ) {
+				errors.rejectValue("files", "file.extension.allowed");
+				break;
+			}
 		}
 		
 	}

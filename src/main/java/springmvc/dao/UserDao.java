@@ -2,8 +2,10 @@ package springmvc.dao;
 
 import java.util.List;
 
+import javax.xml.bind.JAXBException;
+
 public interface UserDao {
 	
-	public void process(List<String> filesPath);
+	public void process(List<String> filesPath) throws JAXBException ;
 
 }

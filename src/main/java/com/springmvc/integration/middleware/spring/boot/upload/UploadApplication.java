@@ -1,4 +1,4 @@
-package com.springmvc.middleware.upload;
+package com.springmvc.integration.middleware.spring.boot.upload;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringBootConfiguration;

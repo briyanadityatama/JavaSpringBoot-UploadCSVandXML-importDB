@@ -1,4 +1,4 @@
-package com.springmvc.middleware.upload.utils;
+package com.springmvc.integration.middleware.spring.boot.upload.utils;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -12,8 +12,8 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
-import com.springmvc.middleware.upload.model.User;
-import com.springmvc.middleware.upload.model.Users;
+import com.springmvc.integration.middleware.spring.boot.upload.model.User;
+import com.springmvc.integration.middleware.spring.boot.upload.model.Users;
 
 public class CommonUtils {
 	

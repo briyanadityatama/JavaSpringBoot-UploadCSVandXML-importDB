@@ -1,4 +1,4 @@
-package com.springmvc.middleware.upload.service;
+package com.springmvc.integration.middleware.spring.boot.upload.service;
 
 import java.util.List;
 

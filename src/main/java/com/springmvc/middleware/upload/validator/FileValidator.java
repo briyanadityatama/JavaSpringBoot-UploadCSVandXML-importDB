@@ -1,12 +1,12 @@
-package springmvc.validator;
+package com.springmvc.middleware.upload.validator;
 
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
-import springmvc.model.FileUpload;
-import springmvc.utils.CommonUtils;
+import com.springmvc.middleware.upload.model.FileUpload;
+import com.springmvc.middleware.upload.utils.CommonUtils;
 
 @Component
 public class FileValidator implements Validator {

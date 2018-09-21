@@ -1,4 +1,4 @@
-package springmvc.dao;
+package com.springmvc.middleware.upload.dao;
 
 import java.util.List;
 

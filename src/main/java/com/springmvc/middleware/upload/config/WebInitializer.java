@@ -1,4 +1,4 @@
-package springmvc.config;
+package com.springmvc.middleware.upload.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 

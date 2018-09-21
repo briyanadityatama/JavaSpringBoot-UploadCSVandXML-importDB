@@ -1,4 +1,4 @@
-package springmvc.model;
+package com.springmvc.middleware.upload.model;
 
 import javax.xml.bind.annotation.*;
 

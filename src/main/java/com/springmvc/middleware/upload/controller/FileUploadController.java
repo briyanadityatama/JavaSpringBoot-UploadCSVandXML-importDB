@@ -1,4 +1,4 @@
-package springmvc.controller;
+package com.springmvc.middleware.upload.controller;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,9 +18,9 @@ import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import springmvc.model.FileUpload;
-import springmvc.service.UserService;
-import springmvc.validator.FileValidator;
+import com.springmvc.middleware.upload.model.FileUpload;
+import com.springmvc.middleware.upload.service.UserService;
+import com.springmvc.middleware.upload.validator.FileValidator;
 
 @Controller
 public class FileUploadController {

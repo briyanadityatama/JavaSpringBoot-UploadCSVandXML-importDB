@@ -1,4 +1,4 @@
-package springmvc.service;
+package com.springmvc.middleware.upload.service;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import javax.xml.bind.JAXBException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import springmvc.dao.UserDao;
+import com.springmvc.middleware.upload.dao.UserDao;
 
 public class UserserviceImpl implements UserService {
 

@@ -1,4 +1,4 @@
-package springmvc.dao;
+package com.springmvc.middleware.upload.dao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,8 +11,8 @@ import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.jdbc.core.namedparam.SqlParameterSourceUtils;
 import org.springframework.stereotype.Component;
 
-import springmvc.model.User;
-import springmvc.utils.CommonUtils;
+import com.springmvc.middleware.upload.model.User;
+import com.springmvc.middleware.upload.utils.CommonUtils;
 
 @Component
 public class UserDaoImpl implements UserDao {

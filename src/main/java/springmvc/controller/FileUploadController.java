@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.xml.bind.JAXBException;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
@@ -17,6 +19,7 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import springmvc.model.FileUpload;
+import springmvc.service.UserService;
 import springmvc.validator.FileValidator;
 
 @Controller
@@ -24,6 +27,9 @@ public class FileUploadController {
 	
 	@Autowired
 	FileValidator fileValidator;
+	
+	@Autowired
+	UserService userService;
 	
 	@RequestMapping(value="uploadPage", method=RequestMethod.GET)
 	public ModelAndView uploadPage() {
@@ -35,7 +41,7 @@ public class FileUploadController {
 	}
 	
 	@RequestMapping(value="/doUpload", method=RequestMethod.POST)
-	public String doUpload(@ModelAttribute("formUpload") FileUpload fileUpload, BindingResult result, RedirectAttributes redirectAttributes) throws IOException {
+	public String doUpload(@ModelAttribute("formUpload") FileUpload fileUpload, BindingResult result, RedirectAttributes redirectAttributes) throws IOException, JAXBException {
 	
 		//validate
 		fileValidator.validate(fileUpload, result);
@@ -57,7 +63,7 @@ public class FileUploadController {
 		
 	}
 	
-	private List<String> uploadAndImportDb(FileUpload fileUpload) throws IOException{
+	private List<String> uploadAndImportDb(FileUpload fileUpload) throws IOException, JAXBException{
 		List<String> fileNames = new ArrayList<String>();
 		List<String> paths = new ArrayList<String>();
 		
@@ -77,6 +83,7 @@ public class FileUploadController {
 		}
 		
 		//process parse and import data
+		userService.process(paths);
 		
 		
 		return fileNames;
